@@ -21,10 +21,11 @@ class AuditApp:
         self.root.geometry("1280x820")
 
         self.erp_db_var = tk.StringVar()
-        self.snapshot_dir_var = tk.StringVar(value=str(Path(".\\copias").resolve()))
+        default_snap_dir = Path(".\\copias").resolve()
+        self.snapshot_dir_var = tk.StringVar(value=str(default_snap_dir))
 
-        self.before_var = tk.StringVar()
-        self.after_var = tk.StringVar()
+        self.before_var = tk.StringVar(value=str(default_snap_dir / "A.accdb"))
+        self.after_var = tk.StringVar(value=str(default_snap_dir / "B.accdb"))
         self.before_table_var = tk.StringVar(value="(Todas)")
         self.after_table_var = tk.StringVar(value="(Todas)")
         self.ignore_var = tk.StringVar(value=",".join(DEFAULT_IGNORE_COLUMNS))
@@ -209,6 +210,8 @@ class AuditApp:
         path = filedialog.askdirectory()
         if path:
             self.snapshot_dir_var.set(path)
+            self.before_var.set(str(Path(path) / "A.accdb"))
+            self.after_var.set(str(Path(path) / "B.accdb"))
 
     def _do_snapshot(self, target_name: str, var_to_update: tk.StringVar, status_msg: str) -> None:
         erp_path = self.erp_db_var.get().strip()
