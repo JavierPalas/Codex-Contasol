@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
@@ -19,6 +20,9 @@ class AuditApp:
         self.root.title("Auditoria de Access (Python)")
         self.root.geometry("1280x820")
 
+        self.erp_db_var = tk.StringVar()
+        self.snapshot_dir_var = tk.StringVar(value=str(Path(".\\copias").resolve()))
+
         self.before_var = tk.StringVar()
         self.after_var = tk.StringVar()
         self.before_table_var = tk.StringVar(value="(Todas)")
@@ -35,10 +39,30 @@ class AuditApp:
         self.current_deleted: list[dict] = []
         self.current_modified: list[dict] = []
 
+        # Crear carpeta para contexto de IA si no existe
+        Path(".\\contexto_ia").mkdir(exist_ok=True)
+
         self._build_ui()
 
     def _build_ui(self) -> None:
-        container = ttk.Frame(self.root, padding=12)
+        main_container = ttk.Frame(self.root, padding=12)
+        main_container.pack(fill="both", expand=True)
+
+        erp_frame = ttk.LabelFrame(main_container, text=" Snapshots Automáticos (Base ERP) ", padding=8)
+        erp_frame.pack(fill="x", pady=(0, 15))
+
+        ttk.Label(erp_frame, text="Base de datos ERP:").grid(row=0, column=0, sticky="w")
+        ttk.Entry(erp_frame, textvariable=self.erp_db_var, width=80).grid(row=0, column=1, sticky="w", padx=5)
+        ttk.Button(erp_frame, text="Seleccionar...", command=self.pick_erp_db).grid(row=0, column=2, padx=5)
+
+        ttk.Label(erp_frame, text="Carpeta copias:").grid(row=1, column=0, sticky="w", pady=5)
+        ttk.Entry(erp_frame, textvariable=self.snapshot_dir_var, width=80).grid(row=1, column=1, sticky="w", padx=5, pady=5)
+        ttk.Button(erp_frame, text="Seleccionar...", command=self.pick_snapshot_dir).grid(row=1, column=2, padx=5, pady=5)
+
+        ttk.Button(erp_frame, text="Snapshot ANTES (A)", command=self.create_snapshot_a).grid(row=0, column=3, rowspan=2, padx=(20, 5), sticky="ns", pady=5)
+        ttk.Button(erp_frame, text="Snapshot DESPUÉS (B)", command=self.create_snapshot_b).grid(row=0, column=4, rowspan=2, padx=5, sticky="ns", pady=5)
+
+        container = ttk.Frame(main_container)
         container.pack(fill="both", expand=True)
 
         ttk.Label(container, text="Base ANTES").grid(row=0, column=0, sticky="w")
@@ -63,6 +87,12 @@ class AuditApp:
         ttk.Button(
             container, text="Ejecutar auditoria", command=self.run_audit
         ).grid(row=1, column=5, padx=(12, 0), sticky="ew")
+        
+        self.ai_prompt_button = ttk.Button(
+            container, text="Generar Prompt IA", command=self.generate_ai_prompt, state="disabled"
+        )
+        self.ai_prompt_button.grid(row=3, column=4, padx=(12, 0), sticky="ew")
+
         self.export_button = ttk.Button(
             container, text="Exportar JSON", command=self.export_json, state="disabled"
         )
@@ -168,6 +198,104 @@ class AuditApp:
         text.configure(state="disabled")
         return listbox, text
 
+    def pick_erp_db(self) -> None:
+        path = filedialog.askopenfilename(
+            filetypes=[("Access database", "*.accdb *.mdb"), ("All files", "*.*")]
+        )
+        if path:
+            self.erp_db_var.set(path)
+
+    def pick_snapshot_dir(self) -> None:
+        path = filedialog.askdirectory()
+        if path:
+            self.snapshot_dir_var.set(path)
+
+    def _do_snapshot(self, target_name: str, var_to_update: tk.StringVar, status_msg: str) -> None:
+        erp_path = self.erp_db_var.get().strip()
+        snap_dir = self.snapshot_dir_var.get().strip()
+        if not erp_path:
+            messagebox.showerror("Error", "Selecciona primero la Base de datos ERP.")
+            return
+        if not snap_dir:
+            messagebox.showerror("Error", "Selecciona una carpeta para las copias.")
+            return
+        
+        try:
+            Path(snap_dir).mkdir(parents=True, exist_ok=True)
+            target_path = Path(snap_dir) / target_name
+            shutil.copy2(erp_path, target_path)
+            var_to_update.set(str(target_path.resolve()))
+            self.status_var.set(status_msg)
+        except Exception as e:
+            messagebox.showerror("Error copiando", str(e))
+
+    def create_snapshot_a(self) -> None:
+        self._do_snapshot("A.accdb", self.before_var, "Snapshot ANTES (A) creado y asignado.")
+
+    def create_snapshot_b(self) -> None:
+        self._do_snapshot("B.accdb", self.after_var, "Snapshot DESPUÉS (B) creado y asignado.")
+
+    def generate_ai_prompt(self) -> None:
+        if not self.current_result:
+            return
+
+        prompt = [
+            "Actúa como un experto contable y auditor de sistemas. Analiza los siguientes cambios en la base de datos de un programa contable tras una acción del usuario.",
+            "Tu objetivo es deducir qué operación administrativa o contable se ha realizado (ej. Facturación, Contabilización, Cobro, etc.).",
+            "",
+            "### RESUMEN DE CAMBIOS DETECTADOS ###",
+            ""
+        ]
+
+        for report in self.current_table_reports:
+            table_name = report["table"]
+            prompt.append(f"--- TABLA: {table_name} ---")
+            prompt.append(f"  Altas: {report['inserted_count']}")
+            prompt.append(f"  Bajas: {report['deleted_count']}")
+            prompt.append(f"  Modificaciones: {report['modified_count']}")
+
+            if report["inserted_count"] > 0 and report.get("inserted"):
+                prompt.append("  [Detalle Altas (Primeros registros)]:")
+                for i, entry in enumerate(report["inserted"][:2]):
+                    prompt.append(f"    - Nueva Fila: {entry['key']}")
+                    for k, v in list(entry.get("row", {}).items())[:10]:
+                        prompt.append(f"        {k} = {v}")
+
+            if report["modified_count"] > 0 and report.get("modified"):
+                prompt.append("  [Detalle Modificaciones (Primeros registros)]:")
+                for i, entry in enumerate(report["modified"][:3]):
+                    prompt.append(f"    - Fila {entry['key']}:")
+                    for change in entry.get("changes", []):
+                        prompt.append(f"        Campo '{change['column']}': Antes='{change['before']}' -> Después='{change['after']}'")
+            prompt.append("")
+
+        prompt.extend([
+            "### INSTRUCCIONES PARA EL ANÁLISIS ###",
+            "1. Identifica qué tablas principales sufrieron cambios (ej. Cabeceras de facturas vs Líneas).",
+            "2. Relaciona los campos modificados (ej. cambio de estado de pendiente a cobrado o totales).",
+            "3. Concluye explicando qué ha hecho el usuario en el programa.",
+            "4. Utiliza la documentación del manual del programa que tienes en tu contexto para dar nombres exactos si es posible."
+        ])
+
+        full_prompt = "\n".join(prompt)
+
+        # Mostrar en ventana
+        popup = tk.Toplevel(self.root)
+        popup.title("Prompt para NotebookLM / IA")
+        popup.geometry("800x600")
+        
+        text_area = tk.Text(popup, wrap="word", font=("Consolas", 10))
+        text_area.pack(fill="both", expand=True, padx=10, pady=10)
+        text_area.insert("1.0", full_prompt)
+        text_area.configure(state="disabled")
+
+        def copy_to_clipboard():
+            self.root.clipboard_clear()
+            self.root.clipboard_append(full_prompt)
+            messagebox.showinfo("Copiado", "Prompt copiado al portapapeles. Pégalo en NotebookLM.", parent=popup)
+
+        ttk.Button(popup, text="Copiar al Portapapeles", command=copy_to_clipboard).pack(pady=10)
+
     def pick_before(self) -> None:
         path = filedialog.askopenfilename(
             filetypes=[("Access database", "*.accdb *.mdb"), ("All files", "*.*")]
@@ -233,6 +361,7 @@ class AuditApp:
             self.bind_table_grid()
             self.reset_detail_views()
             self.export_button.configure(state="normal")
+            self.ai_prompt_button.configure(state="normal")
 
             if not self.current_table_reports:
                 self.status_var.set("No se detectaron tablas con cambios.")
