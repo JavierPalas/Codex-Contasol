@@ -1,0 +1,1002 @@
+﻿{
+    "generated_at":  "2026-03-14T15:53:56.5544409+01:00",
+    "before_database":  "C:\\Users\\JPR\\Dropbox\\Z_Escritorio Asus\\Codex Contasol\\A.accdb",
+    "after_database":  "C:\\Users\\JPR\\Dropbox\\Z_Escritorio Asus\\Codex Contasol\\B.accdb",
+    "ignored_columns":  [
+                            "FechaModificacion",
+                            "Fecha_Modificacion",
+                            "FecMod",
+                            "UsuarioModificacion",
+                            "Usuario_Modificacion"
+                        ],
+    "table_count":  5,
+    "tables":  [
+                   {
+                       "table":  "F_APU",
+                       "primary_key_columns":  [
+                                                   "DIAAPU",
+                                                   "FECAPU",
+                                                   "ASIAPU",
+                                                   "ORDAPU"
+                                               ],
+                       "tracked_columns":  [
+                                               "DIAAPU",
+                                               "FECAPU",
+                                               "ASIAPU",
+                                               "ORDAPU",
+                                               "CUEAPU",
+                                               "IMPAPU",
+                                               "IMEAPU",
+                                               "MONAPU",
+                                               "CONAPU",
+                                               "DOCAPU",
+                                               "D-HAPU",
+                                               "PUNAPU",
+                                               "TIVAPU",
+                                               "CIVAPU",
+                                               "DEPAPU",
+                                               "SUBAPU",
+                                               "IMAAPU",
+                                               "UCRAPU",
+                                               "FCRAPU",
+                                               "UUMAPU",
+                                               "FUMAPU",
+                                               "GUIDAPU",
+                                               "UKBAPU",
+                                               "TRZAPU"
+                                           ],
+                       "has_reliable_key":  true,
+                       "inserted_count":  2,
+                       "deleted_count":  0,
+                       "modified_count":  0,
+                       "inserted":  [
+                                        {
+                                            "key":  "DIAAPU=1|FECAPU=2026-02-25T00:00:00.0000000|ASIAPU=241|ORDAPU=1",
+                                            "row":  {
+                                                        "DIAAPU":  "1",
+                                                        "FECAPU":  "2026-02-25T00:00:00.0000000",
+                                                        "ASIAPU":  "241",
+                                                        "ORDAPU":  "1",
+                                                        "CUEAPU":  "5720000021",
+                                                        "IMPAPU":  "1063.58",
+                                                        "IMEAPU":  "1063.58",
+                                                        "MONAPU":  "E",
+                                                        "CONAPU":  "bs8387 Recibo Sitios Land Sl Nº Recibo",
+                                                        "DOCAPU":  "",
+                                                        "D-HAPU":  "H",
+                                                        "PUNAPU":  "1",
+                                                        "TIVAPU":  "",
+                                                        "CIVAPU":  "0",
+                                                        "DEPAPU":  "0",
+                                                        "SUBAPU":  "0",
+                                                        "IMAAPU":  "",
+                                                        "UCRAPU":  "1",
+                                                        "FCRAPU":  "2026-03-14T00:00:00.0000000",
+                                                        "UUMAPU":  "1",
+                                                        "FUMAPU":  "2026-03-14T00:00:00.0000000",
+                                                        "GUIDAPU":  "",
+                                                        "UKBAPU":  "0",
+                                                        "TRZAPU":  ""
+                                                    }
+                                        },
+                                        {
+                                            "key":  "DIAAPU=1|FECAPU=2026-02-25T00:00:00.0000000|ASIAPU=241|ORDAPU=2",
+                                            "row":  {
+                                                        "DIAAPU":  "1",
+                                                        "FECAPU":  "2026-02-25T00:00:00.0000000",
+                                                        "ASIAPU":  "241",
+                                                        "ORDAPU":  "2",
+                                                        "CUEAPU":  "4100019020",
+                                                        "IMPAPU":  "1063.58",
+                                                        "IMEAPU":  "1063.58",
+                                                        "MONAPU":  "E",
+                                                        "CONAPU":  "bs8387 Recibo Sitios Land Sl Nº Recibo",
+                                                        "DOCAPU":  "",
+                                                        "D-HAPU":  "D",
+                                                        "PUNAPU":  "1",
+                                                        "TIVAPU":  "",
+                                                        "CIVAPU":  "0",
+                                                        "DEPAPU":  "0",
+                                                        "SUBAPU":  "0",
+                                                        "IMAAPU":  "",
+                                                        "UCRAPU":  "1",
+                                                        "FCRAPU":  "2026-03-14T00:00:00.0000000",
+                                                        "UUMAPU":  "1",
+                                                        "FUMAPU":  "2026-03-14T00:00:00.0000000",
+                                                        "GUIDAPU":  "",
+                                                        "UKBAPU":  "0",
+                                                        "TRZAPU":  ""
+                                                    }
+                                        }
+                                    ],
+                       "deleted":  [
+
+                                   ],
+                       "modified":  [
+
+                                    ]
+                   },
+                   {
+                       "table":  "F_CFG",
+                       "primary_key_columns":  [
+                                                   "CODCFG"
+                                               ],
+                       "tracked_columns":  [
+                                               "CODCFG",
+                                               "NUMCFG",
+                                               "TEXCFG",
+                                               "TIPCFG"
+                                           ],
+                       "has_reliable_key":  true,
+                       "inserted_count":  0,
+                       "deleted_count":  0,
+                       "modified_count":  16,
+                       "inserted":  [
+
+                                    ],
+                       "deleted":  [
+
+                                   ],
+                       "modified":  [
+                                        {
+                                            "key":  "CODCFG=BillinCobPagConcepCobFac",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinCobPagConcepPagFac",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinCobPagConcepTipoC",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinCobPagConcepTipoP",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinCobPagCuentaBanco",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinCobPagCuentaCaja",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinComprasGastosUnir1Cuenta",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacEmitidasDH",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacEmitidasTexto",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacRecibidasDH",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacRecibidasTexto",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacturasEmitidas",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinConceptoFacturasRecibidas",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinIVANoDeducCtaIVA",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinIVANoDeducCtaProrrata",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "NUMCFG",
+                                                                "before":  "0.0000",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CODCFG=BillinIVANoDeducSumarImpACompras",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "TEXCFG",
+                                                                "before":  "",
+                                                                "after":  null
+                                                            }
+                                                        ]
+                                        }
+                                    ]
+                   },
+                   {
+                       "table":  "F_DIA",
+                       "primary_key_columns":  [
+                                                   "CODDIA"
+                                               ],
+                       "tracked_columns":  [
+                                               "CODDIA",
+                                               "NOMDIA",
+                                               "ASIDIA"
+                                           ],
+                       "has_reliable_key":  true,
+                       "inserted_count":  0,
+                       "deleted_count":  0,
+                       "modified_count":  1,
+                       "inserted":  [
+
+                                    ],
+                       "deleted":  [
+
+                                   ],
+                       "modified":  [
+                                        {
+                                            "key":  "CODDIA=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "ASIDIA",
+                                                                "before":  "241",
+                                                                "after":  "242"
+                                                            }
+                                                        ]
+                                        }
+                                    ]
+                   },
+                   {
+                       "table":  "F_OPE",
+                       "primary_key_columns":  [
+                                                   "ENTOPE",
+                                                   "OFIOPE",
+                                                   "CUEOPE",
+                                                   "FECOPE",
+                                                   "ORDOPE"
+                                               ],
+                       "tracked_columns":  [
+                                               "ENTOPE",
+                                               "OFIOPE",
+                                               "CUEOPE",
+                                               "FECOPE",
+                                               "ORDOPE",
+                                               "COOOPE",
+                                               "FVAOPE",
+                                               "CCOOPE",
+                                               "CPROPE",
+                                               "D-HOPE",
+                                               "IMPOPE",
+                                               "DOCOPE",
+                                               "RE1OPE",
+                                               "RE2OPE",
+                                               "CO1OPE",
+                                               "CO2OPE",
+                                               "CO3OPE",
+                                               "CO4OPE",
+                                               "CO5OPE",
+                                               "CO6OPE",
+                                               "CO7OPE",
+                                               "CO8OPE",
+                                               "CO9OPE",
+                                               "CO10OPE",
+                                               "PUNOPE",
+                                               "IDEOPE"
+                                           ],
+                       "has_reliable_key":  true,
+                       "inserted_count":  0,
+                       "deleted_count":  8,
+                       "modified_count":  13,
+                       "inserted":  [
+
+                                    ],
+                       "deleted":  [
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-02T00:00:00.0000000|ORDOPE=4",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-02T00:00:00.0000000",
+                                                       "ORDOPE":  "4",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-02T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "387.15",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Mutualidad Abogacia C. G",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1186"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-04T00:00:00.0000000|ORDOPE=3",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-04T00:00:00.0000000",
+                                                       "ORDOPE":  "3",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-04T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "3.15",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Colegio De Registradores",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "0",
+                                                       "IDEOPE":  "1185"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-09T00:00:00.0000000|ORDOPE=1",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-09T00:00:00.0000000",
+                                                       "ORDOPE":  "1",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-09T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "21.5",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Colegio De Registradores",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "0",
+                                                       "IDEOPE":  "1183"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-09T00:00:00.0000000|ORDOPE=2",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-09T00:00:00.0000000",
+                                                       "ORDOPE":  "2",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-09T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "9.56",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Colegio De Registradores",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1184"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-10T00:00:00.0000000|ORDOPE=4",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-10T00:00:00.0000000",
+                                                       "ORDOPE":  "4",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-10T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "H",
+                                                       "IMPOPE":  "5792.9",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Trf de Saica Natur S.l., Concep",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1219"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-11T00:00:00.0000000|ORDOPE=1",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "ORDOPE":  "1",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "997.22",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Trf a Raquel Altolaguirre Abril",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1216"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-11T00:00:00.0000000|ORDOPE=2",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "ORDOPE":  "2",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "24.95",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Orange Espagne S.a.u - O",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1217"
+                                                   }
+                                       },
+                                       {
+                                           "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-11T00:00:00.0000000|ORDOPE=3",
+                                           "row":  {
+                                                       "ENTOPE":  "0075",
+                                                       "OFIOPE":  "0006",
+                                                       "CUEOPE":  "0600238387",
+                                                       "FECOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "ORDOPE":  "3",
+                                                       "COOOPE":  "",
+                                                       "FVAOPE":  "2026-02-11T00:00:00.0000000",
+                                                       "CCOOPE":  "",
+                                                       "CPROPE":  "",
+                                                       "D-HOPE":  "D",
+                                                       "IMPOPE":  "150.38",
+                                                       "DOCOPE":  "",
+                                                       "RE1OPE":  "",
+                                                       "RE2OPE":  "",
+                                                       "CO1OPE":  "bs8387 Recibo Orange Espagne S.a., Con",
+                                                       "CO2OPE":  "",
+                                                       "CO3OPE":  "",
+                                                       "CO4OPE":  "",
+                                                       "CO5OPE":  "",
+                                                       "CO6OPE":  "",
+                                                       "CO7OPE":  "",
+                                                       "CO8OPE":  "",
+                                                       "CO9OPE":  "",
+                                                       "CO10OPE":  "",
+                                                       "PUNOPE":  "1",
+                                                       "IDEOPE":  "1218"
+                                                   }
+                                       }
+                                   ],
+                       "modified":  [
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-17T00:00:00.0000000|ORDOPE=13",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1250",
+                                                                "after":  "1293"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-19T00:00:00.0000000|ORDOPE=11",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1248",
+                                                                "after":  "1291"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-19T00:00:00.0000000|ORDOPE=12",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1249",
+                                                                "after":  "1292"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-23T00:00:00.0000000|ORDOPE=10",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1247",
+                                                                "after":  "1290"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-23T00:00:00.0000000|ORDOPE=9",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1246",
+                                                                "after":  "1289"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-25T00:00:00.0000000|ORDOPE=6",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1243",
+                                                                "after":  "1286"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-25T00:00:00.0000000|ORDOPE=7",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1244",
+                                                                "after":  "1287"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-25T00:00:00.0000000|ORDOPE=8",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PUNOPE",
+                                                                "before":  "1",
+                                                                "after":  "0"
+                                                            },
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1245",
+                                                                "after":  "1288"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-27T00:00:00.0000000|ORDOPE=2",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1239",
+                                                                "after":  "1282"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-27T00:00:00.0000000|ORDOPE=3",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1240",
+                                                                "after":  "1283"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-27T00:00:00.0000000|ORDOPE=4",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1241",
+                                                                "after":  "1284"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-02-27T00:00:00.0000000|ORDOPE=5",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1242",
+                                                                "after":  "1285"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "ENTOPE=0075|OFIOPE=0006|CUEOPE=0600238387|FECOPE=2026-03-02T00:00:00.0000000|ORDOPE=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "IDEOPE",
+                                                                "before":  "1238",
+                                                                "after":  "1281"
+                                                            }
+                                                        ]
+                                        }
+                                    ]
+                   },
+                   {
+                       "table":  "F_SAL",
+                       "primary_key_columns":  [
+                                                   "CUESAL",
+                                                   "DIASAL"
+                                               ],
+                       "tracked_columns":  [
+                                               "CUESAL",
+                                               "DIASAL",
+                                               "PD0SAL",
+                                               "PH0SAL",
+                                               "PD1SAL",
+                                               "PH1SAL",
+                                               "PD2SAL",
+                                               "PH2SAL",
+                                               "PD3SAL",
+                                               "PH3SAL",
+                                               "PD4SAL",
+                                               "PH4SAL",
+                                               "PD5SAL",
+                                               "PH5SAL",
+                                               "PD6SAL",
+                                               "PH6SAL",
+                                               "PD7SAL",
+                                               "PH7SAL",
+                                               "PD8SAL",
+                                               "PH8SAL",
+                                               "PD9SAL",
+                                               "PH9SAL",
+                                               "PD10SAL",
+                                               "PH10SAL",
+                                               "PD11SAL",
+                                               "PH11SAL",
+                                               "PD12SAL",
+                                               "PH12SAL",
+                                               "PD13SAL",
+                                               "PH13SAL",
+                                               "PD14SAL",
+                                               "PH14SAL",
+                                               "ED0SAL",
+                                               "EH0SAL",
+                                               "ED1SAL",
+                                               "EH1SAL",
+                                               "ED2SAL",
+                                               "EH2SAL",
+                                               "ED3SAL",
+                                               "EH3SAL",
+                                               "ED4SAL",
+                                               "EH4SAL",
+                                               "ED5SAL",
+                                               "EH5SAL",
+                                               "ED6SAL",
+                                               "EH6SAL",
+                                               "ED7SAL",
+                                               "EH7SAL",
+                                               "ED8SAL",
+                                               "EH8SAL",
+                                               "ED9SAL",
+                                               "EH9SAL",
+                                               "ED10SAL",
+                                               "EH10SAL",
+                                               "ED11SAL",
+                                               "EH11SAL",
+                                               "ED12SAL",
+                                               "EH12SAL",
+                                               "ED13SAL",
+                                               "EH13SAL",
+                                               "ED14SAL",
+                                               "EH14SAL"
+                                           ],
+                       "has_reliable_key":  true,
+                       "inserted_count":  0,
+                       "deleted_count":  0,
+                       "modified_count":  8,
+                       "inserted":  [
+
+                                    ],
+                       "deleted":  [
+
+                                   ],
+                       "modified":  [
+                                        {
+                                            "key":  "CUESAL=410|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PD2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            },
+                                                            {
+                                                                "column":  "ED2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=4100|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PD2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            },
+                                                            {
+                                                                "column":  "ED2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=41000|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PD2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            },
+                                                            {
+                                                                "column":  "ED2SAL",
+                                                                "before":  "50897.69",
+                                                                "after":  "51961.27"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=4100019020|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PD2SAL",
+                                                                "before":  "1063.58",
+                                                                "after":  "2127.16"
+                                                            },
+                                                            {
+                                                                "column":  "ED2SAL",
+                                                                "before":  "1063.58",
+                                                                "after":  "2127.16"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=572|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            },
+                                                            {
+                                                                "column":  "EH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=5720|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            },
+                                                            {
+                                                                "column":  "EH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=57200|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            },
+                                                            {
+                                                                "column":  "EH2SAL",
+                                                                "before":  "59518.37",
+                                                                "after":  "60581.95"
+                                                            }
+                                                        ]
+                                        },
+                                        {
+                                            "key":  "CUESAL=5720000021|DIASAL=1",
+                                            "changes":  [
+                                                            {
+                                                                "column":  "PH2SAL",
+                                                                "before":  "52172.19",
+                                                                "after":  "53235.77"
+                                                            },
+                                                            {
+                                                                "column":  "EH2SAL",
+                                                                "before":  "52172.19",
+                                                                "after":  "53235.77"
+                                                            }
+                                                        ]
+                                        }
+                                    ]
+                   }
+               ]
+}
